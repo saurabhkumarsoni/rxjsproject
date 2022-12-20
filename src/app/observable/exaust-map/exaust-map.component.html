@@ -1,0 +1,70 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>ExhaustMap </h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h5>Save Data</h5>
+            <hr/>
+            <div class="col-md-6">
+                  <div>
+                    <button type="submit"  #btn>Submit</button>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Thumbnall</th>
+                        <th scope="col">Title & Description</th>
+                      </tr>
+                    </thead>
+                    <!-- <tbody>
+                      <tr *ngFor="let item of searchTermResults;let i = index">
+                        <th scope="row">{{i+1}}</th>
+                        <td><img src="{{item.thumb}}" alt="" width="120px"></td>
+                        <td>
+                            <strong>{{item.title}}</strong>
+                            <p>{{item.description}}</p>
+                        </td>
+                        
+                      </tr>
+                      
+                    </tbody> -->
+                    Service Api Call  - {{data}}
+                  </table>
+            </div>
+        </div>
+    </div>
+  
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for ExhaustMap operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    ExhaustMap.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/mergeMap2html.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/mergeMap2code.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/mergeMapService.PNG" class="contentWidth"/>
+                </div> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>

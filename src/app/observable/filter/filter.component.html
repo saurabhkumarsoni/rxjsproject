@@ -1,0 +1,137 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>Filter</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 1: filter based on length
+                </div>
+                <div class="card-body">
+                   <p class="bg-light py-2 px-3 border rounded">
+                       <strong>filter : by length </strong>
+                   </p>
+                   <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Job</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of data">
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.gender}}</td>
+                        <td>{{item.skill}}</td>
+                        <td>{{item.job}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 2: filter objects based on property
+                </div>
+                <div class="card-body">
+                   <p class="bg-light py-2 px-3 border rounded">
+                       <strong>filter : </strong> by gender
+                   </p>
+                   <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Job</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of data2">
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.gender}}</td>
+                        <td>{{item.skill}}</td>
+                        <td>{{item.job}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 3: filter for number greater than specified value
+                </div>
+                <div class="card-body">
+                   <p class="bg-light py-2 px-3 border rounded">
+                       <strong>Pluck : </strong> by property
+                   </p>
+                   <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Job</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of data3">
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.gender}}</td>
+                        <td>{{item.skill}}</td>
+                        <td>{{item.job}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+    </div>
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for fromEvent operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    filter.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/filterCodeComponent.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/filterCodeComponent2.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/filterCodeComponent3.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/filterCodeHtml.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/filterCodeHtml2.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/filterCodeHtml3.PNG" class="contentWidth"/>
+                </div> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>

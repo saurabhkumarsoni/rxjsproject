@@ -1,0 +1,72 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>Filter</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 1: Fetching data from API with loader and Toaster
+                </div>
+                <div class="card-body">
+                   <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Website</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of userListData">
+                        <td>{{item['id']}}</td>
+                        <td>{{item['name']}}</td>
+                        <td>{{item['email']}}</td>
+                        <td>
+                            {{item['company']['name']}}
+                        </td>
+                       <td> {{item['address']['city']}}</td>
+                       <td>{{item['phone']}}</td>
+                       <td>{{item['website']}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+     
+    </div>
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for Retry, RetryWhen, Scan & Delay operator</h4>
+          <button type="button" class="close" aria-label="Close"  (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    retry.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/retry.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/retryHtml.PNG" class="contentWidth"/>
+                </div> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>

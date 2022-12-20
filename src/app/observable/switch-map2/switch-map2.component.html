@@ -1,0 +1,73 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>Switch Map</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h5>Search YouTube Videos</h5>
+            <form #serachForm = "ngForm">
+                <div class="ml-3 mb-3">
+                    <input type="text" ngModel class="form-control form-control-lg" required name="searchTerm" autocomplete="off"/>
+                </div>
+            </form>
+            <hr/>
+            <div class="results" *ngIf="searchTermResults">
+                <div class="d-flex">
+                    <h5>Search</h5>
+                    <span class="ml-auto text-muted">{{searchResultCount}} Results found</span>
+                </div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Thumbnall</th>
+                        <th scope="col">Title & Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of searchTermResults;let i = index">
+                        <th scope="row">{{i+1}}</th>
+                        <td><img src="{{item.thumb}}" alt="" width="120px"></td>
+                        <td>
+                            <strong>{{item.title}}</strong>
+                            <p>{{item.description}}</p>
+                        </td>
+                        
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+               
+            </div>
+        </div>
+    </div>
+  
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for mergeMap operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    mergeMap2.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/mergeMap2html.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/mergeMap2code.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/mergeMapService.PNG" class="contentWidth"/>
+                </div> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>

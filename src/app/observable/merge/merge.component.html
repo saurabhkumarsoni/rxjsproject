@@ -1,0 +1,90 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>Merge</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Source 1 | Tech Channel(5)
+                </div>
+                <div class="card-body">
+                   <p class="bg-light py-2 px-3 border rounded">
+                       <strong> Tech Videos List: </strong> 1,2,3,4,5
+                   </p>
+                  </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Source 2 | Comedy Channel(4)
+                </div>
+                <div class="card-body">
+                    <p class="bg-light py-2 px-3 border rounded">
+                        <strong> Comedy Videos List: </strong> 1,2,3,4
+                    </p>
+                   </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Source 3 | News Channel(3)
+                </div>
+                <div class="card-body">
+                    <p class="bg-light py-2 px-3 border rounded">
+                        <strong> News Videos List: </strong> 1,2,3
+                    </p>
+                   </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+    </div>
+    <br/>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-header">
+                    Your Channel subscribers
+                </div>
+                <div class="card-body">
+                    <p class="bg-light py-2 px-3 border rounded">
+                        <strong> News Videos List: </strong> 1,2,3
+                    </p>
+                    <ul id="containerId3"></ul>
+                   
+                   </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+    </div>
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for merge operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    merge.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/mergeCode.PNG" class="contentWidth"/>
+                </div> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>

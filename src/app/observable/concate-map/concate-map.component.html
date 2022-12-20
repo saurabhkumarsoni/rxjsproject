@@ -1,0 +1,82 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>concatMap</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Ex 1 | Map
+                </div>
+                <div class="card-body">
+                   <p class="bg-light py-2 px-3 border rounded">
+                       <strong> Videos: </strong> ['Tech', 'Comedy'. 'News']
+                   </p>
+                   <ul id="container1">
+                   </ul>
+                  </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Ex 2 | MergeMap
+                </div>
+                <div class="card-body">
+                   <p class="bg-light py-2 px-3 border rounded">
+                       <strong> Videos: </strong> ['Tech', 'Comedy'. 'News']
+                   </p>
+                   <ul id="container2"></ul>
+                   </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Ex 3 | ConcatMap
+                </div>
+                <div class="card-body">
+                   <p class="bg-light py-2 px-3 border rounded">
+                       <strong> Videos: </strong> ['Tech', 'Comedy'. 'News']
+                   </p>
+                   <ul id="container3"></ul>
+                </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row justify-content-center">
+        <h3>Main difference between mergeMap and ConcatMap is concatMap perform in oder but merge map comes after delay of first interval</h3>
+    </div>
+   
+   
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for concatMap operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    concateMap.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/concatMapCode.PNG" class="contentWidth"/>
+                </div> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>

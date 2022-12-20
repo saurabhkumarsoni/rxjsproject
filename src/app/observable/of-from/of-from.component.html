@@ -1,0 +1,158 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>Of</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary  mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <p> Definition: Convert the arguments to an observable sequence</p>
+        <div class="col-md-4 offset-md-2">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 1: Emitting a sequence of numbers
+                </div>
+                <div class="card-body">
+                  <p class="card-text"></p>
+                  <p>of('saurabh','kumar','soni')</p>
+                  <ul id="containerId1"></ul>
+                </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header"> Example 2: Emitting an object </div>
+                <div class="card-body">
+                    <P>of(&#123; name: 'Brian', id: 2, department: 'IT', salary:232323, Buddy: 'saurabh', RM: 'Neeraj', company: 'EPAM' &#125;</P>
+                    <ul>
+                    <li><strong>Name : </strong> {{ obsMsg.name}}</li>
+                    <li><strong>Department : </strong> {{ obsMsg.department}}</li>
+                    <li><strong>Salary : </strong> {{ obsMsg.salary}}</li>
+                    <li><strong>Buddy : </strong> {{ obsMsg.Buddy}}</li>
+                    <li><strong>Reporting Manager : </strong> {{ obsMsg.RM}}</li>
+                    <li><strong>Comapany Name : </strong> {{ obsMsg.company}}</li>
+                </ul> </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div> 
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>From</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary  mx-2" (click)="openModal(content2)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <p> Definition: Create an observable from an Array, an array-like object, a Promise, an iterable object, or an observable like object</p>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 1: Observable from array
+                </div>
+                <div class="card-body">
+                  <p class="card-text"></p>
+                  <p>from(1, 2, 3, 4, 5, 6)</p>
+                  <ul id="containerIdFrom"></ul>
+                </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header"> Example 2: Observable from promise </div>
+                <div class="card-body">
+                    <P>  const promiseSource = from(new Promise(resolve => &#123;
+                        'Hello Saurabh, How are you'
+                      }&#125;).subscribe(res => &#123;
+                        console.log(res);
+                        this.asPromise = res;
+                        &#125;)</P>
+                    <p>{{asPromise}}</p>    
+                </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div> 
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">Example 3: Observable from Array   </div>
+                <div class="card-body">
+                    <P>const source = from(['saurabh', 'kumar', 'soni'])
+                        source.subscribe(res =>&#123;
+                          console.log(res);
+                          this.sourceString = res;
+                          this.designUtilityService.print(res, '')
+                        &#125;)</P>
+                    <ul id="containerIdFrom2"></ul> </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">Example 4: Observable from String   </div>
+                <div class="card-body">
+                    <P>const source2 = from('Hello World')
+                        source2.subscribe(res =>&#123;
+                          console.log(res);
+                          this.designUtilityService.print(res, '')
+                        &#125;)</P>
+                    <ul id="containerIdFrom3"></ul> </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+    </div>
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for of operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    of.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/ofCodeTSComponent.PNG" class="contentWidth"/>
+                   
+                </div>
+                <div class="card-header">
+                    of.component.html
+                </div>
+                <div class="card-body internal-padding">
+                    <img src="../../../assets/images/ofcodeHTML.PNG" class="contentWidth"/>
+                     
+                  </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <ng-template #content2 let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for from operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    from.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/fromcodecomponent.PNG" class="contentWidth"/>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>

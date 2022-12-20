@@ -1,0 +1,37 @@
+ul.list{
+    list-style-type: none;
+    margin: 40px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+ui.list li{
+    width: calc(25% -20px);
+    margin: 10px;
+}
+ui.list li a{
+    background: #f8f8f8;
+    color: #6296bb;
+}
+ul.list li a:hover{
+background: #e3f2fd;
+color: #477698;
+box-shadow: 0 0 60px #b3cada inset;
+text-decoration: none;
+}
+ul li{
+    justify-content: center;
+    display: flex;
+    min-height: 120px;
+    line-height: 1;
+    transition: 0.3s ease all;
+    width: 275px;
+    margin: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    .image{
+        width: 255px;
+    }
+    .fromEvent{
+        color: cadetblue;
+    }

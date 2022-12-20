@@ -1,0 +1,20 @@
+.flex-container {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .flex-container > div {
+    margin: 0px 20px 0px;
+  }
+  .align-item{
+    text-align: right;
+}
+.internal-padding{
+    padding: 0px !important;
+}
+.contentWidth{
+    width: -webkit-fill-available;
+}
+.myCustomModalClass .modal-dialog {
+    max-width: 865px;
+  }

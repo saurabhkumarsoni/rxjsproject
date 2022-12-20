@@ -1,0 +1,79 @@
+<div class="my-3">
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3>Custom</h3></div>
+        <div style="flex-grow: 9" class="align-item">
+             <p class="btn btn-sm btn-outline-primary mx-2" (click)="openModal(content)">View Source Code</p>
+             <a class="btn btn-sm btn-outline-primary mb-3" routerLink="/observable">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 1: (Manual)
+                </div>
+                <div class="card-body">
+                  <ul class="techList" id="conatinerId1" [ngClass]="techStatus =='completed'? 'completed': techStatus == 'error'? 'error': ''">
+                      
+                  </ul>
+                </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-header"> Example 2: custom observable interval</div>
+                <div class="card-body">
+                    <ul class="techList" id="containerId2" [ngClass]="techStatus2 =='completed'? 'completed': techStatus2 == 'error'? 'error': ''">
+                    </ul>
+                </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <div class="card text-center">
+                <div class="card-header">
+                    Example 3: Random Names
+                </div>
+                <div class="card-body">
+                  <p class="bg-light py-2 px-3 border rounded">
+                      <strong>Random Name: </strong>
+                      'Anup', 'Saurabh', 'Sharma', 'John', 'Alex', 'Sonali', 'Robert', 'Alok'
+                  </p>
+                  <p>Current Name: <strong>{{names}}</strong></p>
+                  <span [ngClass]="nameStatus == 'completed'? 'bg-green' : nameStatus == 'error'? 'bg-red' : 'bg-primary' ">
+                    {{nameStatus == 'completed'? 'Success' : nameStatus == 'error'? 'Error' : 'Running'}}
+                  </span>
+                </div>
+                <div class="card-footer text-muted"> 2 days ago </div>
+              </div>
+        </div>
+    </div>
+    <ng-template #content let-modal class="modal-lg">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Source Code for Custom operator</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-lg">
+          <form>
+            <div class="form-group">
+              <div class="card text-center">
+                <div class="card-header">
+                    custom.component.ts
+                </div>
+                <div class="card-body internal-padding">
+                  <img src="../../../assets/images/custom1.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/customexample2.PNG" class="contentWidth"/>
+                  <img src="../../../assets/images/customexample3.PNG" class="contentWidth"/>
+                </div> 
+                
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+</div>
