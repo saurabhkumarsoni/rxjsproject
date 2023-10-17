@@ -1,12 +1,12 @@
 {
   "name": "ng-rx-project",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "ng": "npm",
+    "start": "npm run start",
     "build": "npm run build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "watch": "npm run build --watch --configuration development",
+    "test": "npm run test"
   },
   "private": true,
   "dependencies": {
